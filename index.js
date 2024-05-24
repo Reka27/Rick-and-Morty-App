@@ -5,6 +5,7 @@ const cardContainer = document.querySelector('[data-js="card-container"]');
 const searchBarContainer = document.querySelector(
   '[data-js="search-bar-container"]'
 );
+const searchForm = document.querySelector('[data-js="search-form"]');
 const searchBar = document.querySelector('[data-js="search-bar"]');
 const navigation = document.querySelector('[data-js="navigation"]');
 const prevButton = document.querySelector('[data-js="button-prev"]');
@@ -44,13 +45,10 @@ prevButton.addEventListener("click", () => {
     fetchCharacters(currPage);
   }
 });
-searchBar.addEventListener("submit", (event) => {
+searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const searchBarContainer = document.querySelector(
-    '[data-js="search-bar-container"]'
-  );
   searchQuery = searchBar.value;
-  currPage = null;
+  currPage = 1;
   fetchCharacters(currPage, searchQuery);
 });
 
