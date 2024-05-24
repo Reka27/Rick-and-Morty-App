@@ -1,7 +1,7 @@
 export default function CharacterCard(characterData) {
   const cardContainer = document.querySelector("[data-js='card-container']");
-  const firstTwenty = characterData.slice(0, 20);
-  firstTwenty.forEach((character) => {
+  // const firstTwenty = characterData.slice(0, 20);
+  characterData.forEach((character) => {
     const {
       name: charName,
       type: charType,
